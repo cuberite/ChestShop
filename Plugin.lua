@@ -62,7 +62,7 @@ end
 function OnUpdatingSign(World, BlockX, BlockY, BlockZ, Line1, Line2, Line3, Line4, Player)
 	------------------------PROTECT------------------
 	local Server = cRoot:Get():GetServer()
-	if (not(Player:HasPermission("adminshop.create")) then
+	if (not(Player:HasPermission("adminshop.create"))) then
 		local split = StringSplit(Line3, "\:");
 		if (#split == 2) then
 			local costfr = tonumber(split[1])
